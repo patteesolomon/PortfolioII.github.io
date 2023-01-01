@@ -103,7 +103,6 @@ function Indexe(props) {
                     }
                 `}
             </style>
-            <h1 className=''>What's Up dude?</h1>
         </div>
     )
 }
