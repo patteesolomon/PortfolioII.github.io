@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "react-scripts start", 
+    "start": "react-scripts start",
     "predeploy": "npm run build",
     "build": "react-scripts build",
     "deploy": "gh-pages -d build",
@@ -22,10 +22,23 @@
     "nodemon": "^2.0.20",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "react-scripts": "^5.0.1",
     "typewriter": "^8.0.10"
   },
   "description": "",
   "devDependencies": {
     "gh-pages": "^4.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
