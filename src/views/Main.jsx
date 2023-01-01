@@ -1,5 +1,6 @@
+const React = require('react');
 
-function Maine(props) {
+function Main (){
     return ( 
         <div className='bgk'>
             <h1 className='fontxl primary container emmet'>
@@ -132,14 +133,5 @@ function Maine(props) {
         </div>
     )
 }
-// main is for the intro
-const React = require('react');
-function Main (){
-        return (
-            <div>
-                {Maine()}
-            </div>
-        )
-    }
 
 export default Main;
