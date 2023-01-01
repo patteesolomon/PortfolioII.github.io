@@ -122,10 +122,8 @@ class Index extends React.Component {
     return (
         <li><a href={`/User/${user.id}`}>
             {
-                user.name.substring(0,1).toUpperCase()
-                + user.name.substring(1) +
-                `${user.name}` +
-                `${user.email}`
+                user.linkedIn.substring(0,1).toUpperCase()
+                + user.linkedIn.substring(1)
             }
             </a>
         </li>
@@ -137,6 +135,8 @@ class Index extends React.Component {
         <a href={`/About`}>About</a>
         <br />
         <a href={`/Git`}>Git Pages</a>
+        <br />
+        <a href={`/YouTube`}>YouTube</a>
     </nav>
 </ul>
         </div>

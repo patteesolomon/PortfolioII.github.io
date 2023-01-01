@@ -7,6 +7,7 @@ const app = express();
 const port = 3001;
 const path = require('path');
 const User = require ('./src/models/User.js');
+const UserInfo = require("./src/models/User.js");
 
 const mongoURI = process.env.MONGO_URI;
 const db = mongoose.connection;
@@ -35,6 +36,7 @@ app.use((req, res, next) => {
     console.log("I run for all routes");
     next();
 });
+
 //
 app.set("view engine", "jsx");
 mongoose.set("strictQuery", true);
@@ -77,6 +79,19 @@ app.get("/Contact", (req, res) =>{
 
 app.get("/Git", (req, res) =>{
     res.render('Git');
+});
+
+app.get("/YouTube", (req, res) =>{
+    res.redirect('https://www.youtube.com/channel/UC32XOq64gUdQQv_MzY6t17w');
+});
+
+// Show page for my LinkedIn
+app.get("/User/:id", (req, res) =>{
+    User.findById(req.params.id, (err, foundUser) =>{
+    let newUser = foundUser;
+    let ln = newUser.linkedIn;
+        res.redirect(`https://www.${ln}/`);
+    });
 });
 
 app.listen(port, () => {
